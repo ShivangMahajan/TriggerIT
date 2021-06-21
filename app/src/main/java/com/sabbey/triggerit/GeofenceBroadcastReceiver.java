@@ -33,6 +33,7 @@ public class GeofenceBroadcastReceiver extends BroadcastReceiver {
 
         switch (transitionType) {
             case Geofence.GEOFENCE_TRANSITION_ENTER:
+                Log.v("here", "entered");
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     if (n.isNotificationPolicyAccessGranted()) {
                         audioManager.setRingerMode(AudioManager.RINGER_MODE_SILENT);
@@ -42,6 +43,7 @@ public class GeofenceBroadcastReceiver extends BroadcastReceiver {
                 break;
 
             case Geofence.GEOFENCE_TRANSITION_EXIT:
+                Log.v("here","exited");
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     if (n.isNotificationPolicyAccessGranted()) {
                         audioManager.setRingerMode(AudioManager.RINGER_MODE_NORMAL);

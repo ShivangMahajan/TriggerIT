@@ -25,19 +25,19 @@
             android:enabled="true"
             android:exported="true"
              />
-        <receiver
-            android:name="GeoRestartReceiver"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
+<!--        <receiver-->
+<!--            android:name="GeoRestartReceiver"-->
+<!--            android:enabled="true"-->
+<!--            android:exported="true">-->
+<!--            <intent-filter>-->
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
 
-                <action android:name="android.intent.action.BOOT_COMPLETED" /> <!-- android.intent.action.LOCKED_BOOT_COMPLETED would be triggered earlier, in case we don't need access to credential secure storage -->
-                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
-                <action android:name="android.location.PROVIDERS_CHANGED" />
-            </intent-filter>
-        </receiver>
+<!--                <action android:name="android.intent.action.BOOT_COMPLETED" /> &lt;!&ndash; android.intent.action.LOCKED_BOOT_COMPLETED would be triggered earlier, in case we don't need access to credential secure storage &ndash;&gt;-->
+<!--                <action android:name="android.intent.action.QUICKBOOT_POWERON" />-->
+<!--                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />-->
+<!--                <action android:name="android.location.PROVIDERS_CHANGED" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
